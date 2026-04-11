@@ -89,7 +89,8 @@ hardpoint_tweaks = TweakList.of(
         fires_turbolaser & ~SINGLE_FIRE_TURBOLASERS & ~name_contains("Assault_Frigate")
     ),
     # Make the assult frigate fire in pairs but slightly slower for a little variety.
-    hardpoint_pulse_balance(pulse_count=2, pulse_delay=0.2).filter(
+    # Still faster than the base rate of fire which was generally 0.2.
+    hardpoint_pulse_balance(pulse_count=2, pulse_delay=0.1).filter(
         fires_turbolaser & ~SINGLE_FIRE_TURBOLASERS & name_contains("Assault_Frigate")
     ),
     # Make medium lasers (mostly corvettes) fire single shots unless they are in the double fire
